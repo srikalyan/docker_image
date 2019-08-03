@@ -1,5 +1,6 @@
 # docker_image
-Provides the official docker images in a controlled way to avoid CI issues for various private projects that I work on.
+Provides the official docker images in a controlled way to avoid issues caused by the bugs/missing
+features caused by upstream changes.
 
 # Update
 To keep up with the official docker image, do the following
@@ -8,4 +9,4 @@ To keep up with the official docker image, do the following
 2. Push the changes to git hub
 3. Release the images with the same version as official docker image version
 4. Test one project's CI to ensure that nothing is broken
-5. If nothing is broken then tag the image as stable
+5. If nothing is broken then tag the image as stable using `release.sh`
