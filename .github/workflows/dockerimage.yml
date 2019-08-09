@@ -1,0 +1,24 @@
+name: Docker Image CI
+
+on: 
+  push
+  schedule:
+  - cron:  0 0 * * *
+
+jobs:
+  build-docker:
+    name: build-docker
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master
+    - name: Build the Docker image
+      run: docker build . --file docker/Dockerfile --tag srikalyan/docker:$(date +%s)
+  build-dind:
+    name: build-dind
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master
+    - name: Build the Docker image
+      run: docker build . --file docker/Dockerfile --tag srikalyan/docker:$(date +%s)
+     
+     
