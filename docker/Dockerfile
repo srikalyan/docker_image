@@ -1,1 +1,1 @@
-From docker:19.03.1
+From docker:19.03.12

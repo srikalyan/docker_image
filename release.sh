@@ -2,7 +2,7 @@
 
 set -euf -o pipefail
 
-VERSION="19.03.0"
+VERSION="19.03.12"
 
 # For docker
 docker pull srikalyan/docker:$VERSION
